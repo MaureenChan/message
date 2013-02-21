@@ -1,9 +1,9 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Maureen's Message Board</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="http://localhost/message/application/views/templates/css/main.css" />
 </head>
 <body>
 <div id="guide">

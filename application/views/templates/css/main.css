@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 ul {
     list-style: none;
 }
@@ -26,3 +30,7 @@ a {
     background: #072;
 }
 
+#foot {
+    margin-top:20px;
+    text-align: center;
+}
