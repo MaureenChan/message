@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+#guide {
+    background: #edf4ed;
+    height: 50px;
+    padding: 30px;
+}
+#guide li {
+    display: inline;
+    font-size: 30px;
+    margin-right: 30px;
+}
+#guide a:link {
+    color: #072;
+}
+#guide a:visited {
+    color: #072;
+}
+#guide a:hover {
+    color: #FFF;
+    background: #072;
+}
+
+#foot {
+    margin-top:20px;
+    text-align: center;
+}
