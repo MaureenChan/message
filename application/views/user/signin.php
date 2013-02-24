@@ -1,5 +1,5 @@
 <div>
-<?php echo form_open('message/user')?>
+<?php echo form_open('user/signin')?>
 <label for="username">username</label>
 <input type="input" name="username"/><br />
 <label for="password">password:</label>

@@ -9,7 +9,7 @@ class User_model extends CI_model {
     public function signup(){
         $username=$this->input->post('username');
         $query=$this->db->get_where('user',array('username'=>$username));
-        if(!$query) {
+        if(!$query->result_array()) {
             $data=array(
                 'username'=>$this->input->post('username'),
                 'email'=>$this->input->post('email'),
@@ -27,8 +27,8 @@ class User_model extends CI_model {
     public function signin(){
         $username=$this->input->post('username');
         $password=$this->input->post('password');
-        $query=$this->db->get_where('user',array('username'=>$username,'password'=>'password'));
-        return $query;
+        $query=$this->db->get_where('user',array('username'=>$username,'password'=>$password));
+        return $query->row_array();
     }
 
 }
