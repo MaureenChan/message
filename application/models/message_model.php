@@ -1,7 +1,7 @@
 <?php
-class Message extends CI_model {
+class Message_model extends CI_model {
 
-    public function __contruct() {
+    public function __construct() {
         $this->load->database();
     }
 
@@ -19,11 +19,11 @@ class Message extends CI_model {
 
     public function set_message()
     {
-       
+        $this->load->helper('date'); 
         $data=array(
             'user_name'=>$this->input->post('user_name'),
             'content'=>$this->input->post('content'),
-            'date'=>date()
+            'date'=>now();//now是helper('date')的函数，不过也不行。
         );
         return $this->db->insert('message',$data);
     }
