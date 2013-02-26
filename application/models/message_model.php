@@ -23,7 +23,7 @@ class Message_model extends CI_model {
         $data=array(
             'username'=>$username,
             'content'=>$this->input->post('content'),
-            'date'=>now()//now是helper('date')的函数，不过也不行。
+            'date'=>now('Y-m-d')//now是helper('date')的函数，不过也不行。;
         );
         return $this->db->insert('message',$data);
     }

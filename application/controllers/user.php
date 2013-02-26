@@ -12,6 +12,7 @@ class User extends CI_Controller{
     {
         $this->load->helper('form');
         $this->load->library('form_validation');
+        $this->load->helper('helper');
         $data['title']='Sign up!';
         $this->form_validation->set_rules('username','username','required');
         $this->form_validation->set_rules('email','email','required');
@@ -33,9 +34,7 @@ class User extends CI_Controller{
             }
             else
             {
-            $this->load->view('templates/header',$data);
-            $this->load->view('message/success');
-            $this->load->view('templates/footer');
+                redirect('message/message_list','location',301);
             }
         }
     }
@@ -47,6 +46,7 @@ class User extends CI_Controller{
         session_start();
         $this->load->helper('form');
         $this->load->library('form_validation');
+        $this->load->helper('url');
         $data['title']='Sign in!';
         $this->form_validation->set_rules('username','username','required');
         $this->form_validation->set_rules('password','password','required');
@@ -63,9 +63,7 @@ class User extends CI_Controller{
             {
                 $_SESSION['username']=$user['username'];
                 $_SESSION['role']=$user['role'];
-                $this->load->view('templates/header',$data);
-                $this->load->view('message/success');
-                $this->load->view('templates/footer');
+                redirect('message/message_list','location',301);
             }
             else
             {

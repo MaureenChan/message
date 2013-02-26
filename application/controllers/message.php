@@ -27,7 +27,9 @@ class Message extends CI_Controller {
             $this->message_model->set_message($name); 
             if($this->form_validation->run()===FALSE)
             {
+                $this->load->view('templates/header',$data);
                 $this->load->view('message/add');
+                $this->load->view('templates/footer');
             }
             else
             {
@@ -45,6 +47,11 @@ class Message extends CI_Controller {
 
     public function message_list()
     {
+        $data['message']=$this->message_model->get_message();
+        $data['title']='Home';
+        $this->load->view('templates/header',$data);
+        $this->load->view('message/list',$data);
+        $this->load->view('templates/footer');
     }
 } 
 ?>

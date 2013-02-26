@@ -97,12 +97,12 @@ width:100%;
 overflow-y:visible;
 margin-top: 10px;
 }
-#main{
+.main{
 background-color: rgba(128, 128, 128, 0.13);
 width: 840px;
 margin: 0 auto;
 }
-#main .date{
+.main .date{
 
 margin-left:667px;
 }
