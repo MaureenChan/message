@@ -44,9 +44,9 @@ class User extends CI_Controller{
 
     public function signin()
     {
+        session_start();
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $user = $this->user_model->signin();
         $data['title']='Sign in!';
         $this->form_validation->set_rules('username','username','required');
         $this->form_validation->set_rules('password','password','required');
@@ -58,20 +58,21 @@ class User extends CI_Controller{
         }
         else
         {
-        if($user)
-        {
-            $_SESSION['username']=$user['username'];
-            $_SESSION['role']=$user['role'];
-            $this->load->view('templates/header',$data);
-            $this->load->view('message/success');
-            $this->load->view('templates/footer');
-        }
-        else
-        {
-            $this->load->view('templates/header',$data);
-            $this->load->view('user/signin');
-            $this->load->view('templates/footer');
-        }
+            $user = $this->user_model->signin();
+            if($user)
+            {
+                $_SESSION['username']=$user['username'];
+                $_SESSION['role']=$user['role'];
+                $this->load->view('templates/header',$data);
+                $this->load->view('message/success');
+                $this->load->view('templates/footer');
+            }
+            else
+            {
+                $this->load->view('templates/header',$data);
+                $this->load->view('user/signin');
+                $this->load->view('templates/footer');
+            }
         }
 
 
