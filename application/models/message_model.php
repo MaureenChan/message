@@ -17,13 +17,13 @@ class Message_model extends CI_model {
     }
 
 
-    public function set_message()
+    public function set_message($username)
     {
         $this->load->helper('date'); 
         $data=array(
-            'user_name'=>$this->input->post('user_name'),
+            'username'=>$username,
             'content'=>$this->input->post('content'),
-            'date'=>now();//now是helper('date')的函数，不过也不行。
+            'date'=>now()//now是helper('date')的函数，不过也不行。
         );
         return $this->db->insert('message',$data);
     }
