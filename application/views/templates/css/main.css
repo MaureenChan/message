@@ -1,6 +1,11 @@
 body {
     margin: 0;
+	background-color: rgba(128, 128, 128, 0.13);
 }
+.listBg{
+background-color: white;
+}
+
 
 ul {
     list-style: none;
@@ -33,4 +38,71 @@ a {
 #foot {
     margin-top:20px;
     text-align: center;
+}
+#add{
+width: 760px;
+margin: 0 auto;
+}
+.setForm{
+padding-bottom: 10px;
+padding-left: 19px;
+}
+.setLabel{
+font-weight: bold;
+display: block;
+width: 723px;
+padding-bottom: 10px;
+color: gray;
+font-size: 23px;
+}
+.setInput{
+display: block;
+margin-left: 670px;
+margin-top: 10px;
+}
+#signup{
+width:840px;
+margin: 0 auto;
+padding: 10px;
+margin-top: 120px;
+
+}
+#signup label{
+font-weight:bold;
+}
+#signin{
+width: 840px;
+margin: 0 auto;
+padding: 10px;
+margin-top: 120px;
+}
+#signin label{
+font-weight:bold;
+}
+#signup table ,#signin table{
+margin:0 auto;
+}
+ .setRight{
+text-align:right;
+}
+.list li{
+font-size: 20px;
+width: 760px;
+border-bottom: 1px solid rgba(128, 128, 128, 0.13);
+margin-top: 20px;
+padding-bottom: 20px;
+}
+.list textarea{
+width:100%; 
+overflow-y:visible;
+margin-top: 10px;
+}
+#main{
+background-color: rgba(128, 128, 128, 0.13);
+width: 840px;
+margin: 0 auto;
+}
+#main .date{
+
+margin-left:667px;
 }
